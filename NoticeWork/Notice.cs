@@ -14,17 +14,14 @@ namespace NoticeWork
 
     public partial class Notice : Form
     {
-
-        public Notice()
-        {
-            InitializeComponent();
-        }
+        
         private DateTime BeginTime;
         private DateTime EndTime;
         public Notice(DateTime beginTime,DateTime endTime)
         {
             BeginTime = beginTime;
             EndTime = endTime;
+            InitializeComponent();
         }
         /// <summary>
         /// Handles the Click event of the btnOK control.
@@ -41,7 +38,7 @@ namespace NoticeWork
                 model.CreateTime = DateTime.Now;
                 model.Remark = txtRemark.Text.Trim();
                 model.TagID = (int)cbTags.SelectedValue;
-                model.TagName = cbTags.SelectedText;
+                model.TagName = cbTags.Text;
                 entity.NoticeLog.Add(model);
                 entity.SaveChanges();
                 this.Close();
@@ -55,6 +52,7 @@ namespace NoticeWork
             using (NeoNoticeWorkEntities db=new NeoNoticeWorkEntities())
             {
                 var tagSource = from b in db.Tags
+                                orderby b.Sort descending
                            select b;
                 cbTags.DataSource = tagSource.ToList();
                 cbTags.ValueMember = "ID";

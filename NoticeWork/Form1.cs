@@ -44,7 +44,8 @@ namespace NoticeWork
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Notice tag = new Notice();
+            int minute = int.Parse(txtNoticeTime.Text.Trim());
+            Notice tag = new Notice(DateTime.Now.AddMinutes(-minute), DateTime.Now);
             tag.Show();
         }
         
