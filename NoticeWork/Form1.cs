@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace NoticeWork
 {
     public partial class Form1 : Form
     {
+        [DllImport("user32 ")]
+        private static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
+        [DllImport("user32 ")]
+        private static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
         public Form1()
         {
             InitializeComponent();

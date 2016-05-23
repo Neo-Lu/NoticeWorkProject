@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace NoticeWork
 {
+
     public partial class Notice : Form
     {
+
         public Notice()
         {
             InitializeComponent();

@@ -34,16 +34,16 @@
             this.btnOK = new System.Windows.Forms.Button();
             this.lblResult = new System.Windows.Forms.Label();
             this.tagsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.neoNoticeWorkDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.neoNoticeWorkDataSet = new NoticeWork.NeoNoticeWorkDataSet();
             this.label3 = new System.Windows.Forms.Label();
             this.tagsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cbTags = new System.Windows.Forms.ComboBox();
-            this.neoNoticeWorkDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.neoNoticeWorkDataSet = new NoticeWork.NeoNoticeWorkDataSet();
             this.tagsTableAdapter = new NoticeWork.NeoNoticeWorkDataSetTableAdapters.TagsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tagsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tagsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.neoNoticeWorkDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.neoNoticeWorkDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tagsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -65,9 +65,9 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(223, 325);
+            this.btnOK.Location = new System.Drawing.Point(178, 325);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(209, 71);
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "确定";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -89,6 +89,16 @@
             // 
             this.tagsBindingSource.DataMember = "Tags";
             this.tagsBindingSource.DataSource = this.neoNoticeWorkDataSetBindingSource;
+            // 
+            // neoNoticeWorkDataSetBindingSource
+            // 
+            this.neoNoticeWorkDataSetBindingSource.DataSource = this.neoNoticeWorkDataSet;
+            this.neoNoticeWorkDataSetBindingSource.Position = 0;
+            // 
+            // neoNoticeWorkDataSet
+            // 
+            this.neoNoticeWorkDataSet.DataSetName = "NeoNoticeWorkDataSet";
+            this.neoNoticeWorkDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label3
             // 
@@ -112,16 +122,6 @@
             this.cbTags.Size = new System.Drawing.Size(198, 26);
             this.cbTags.TabIndex = 7;
             // 
-            // neoNoticeWorkDataSetBindingSource
-            // 
-            this.neoNoticeWorkDataSetBindingSource.DataSource = this.neoNoticeWorkDataSet;
-            this.neoNoticeWorkDataSetBindingSource.Position = 0;
-            // 
-            // neoNoticeWorkDataSet
-            // 
-            this.neoNoticeWorkDataSet.DataSetName = "NeoNoticeWorkDataSet";
-            this.neoNoticeWorkDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tagsTableAdapter
             // 
             this.tagsTableAdapter.ClearBeforeFill = true;
@@ -131,20 +131,21 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 442);
+            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.cbTags);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblResult);
-            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtRemark);
             this.Controls.Add(this.label1);
             this.Name = "Notice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "加油奋斗哦~";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Notice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tagsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tagsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.neoNoticeWorkDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.neoNoticeWorkDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tagsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
