@@ -40,6 +40,7 @@
             this.tagsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cbTags = new System.Windows.Forms.ComboBox();
             this.tagsTableAdapter = new NoticeWork.NeoNoticeWorkDataSetTableAdapters.TagsTableAdapter();
+            this.txtResult = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tagsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.neoNoticeWorkDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.neoNoticeWorkDataSet)).BeginInit();
@@ -49,7 +50,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(175, 136);
+            this.label1.Location = new System.Drawing.Point(175, 305);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(224, 18);
             this.label1.TabIndex = 0;
@@ -57,17 +58,17 @@
             // 
             // txtRemark
             // 
-            this.txtRemark.Location = new System.Drawing.Point(178, 172);
+            this.txtRemark.Location = new System.Drawing.Point(155, 341);
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
-            this.txtRemark.Size = new System.Drawing.Size(209, 129);
+            this.txtRemark.Size = new System.Drawing.Size(368, 130);
             this.txtRemark.TabIndex = 1;
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(178, 325);
+            this.btnOK.Location = new System.Drawing.Point(155, 494);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(209, 71);
+            this.btnOK.Size = new System.Drawing.Size(368, 72);
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "确定";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -79,11 +80,12 @@
             this.lblResult.AutoSize = true;
             this.lblResult.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblResult.ForeColor = System.Drawing.Color.Red;
-            this.lblResult.Location = new System.Drawing.Point(52, 42);
+            this.lblResult.Location = new System.Drawing.Point(28, 68);
             this.lblResult.MaximumSize = new System.Drawing.Size(500, 0);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(0, 24);
+            this.lblResult.Size = new System.Drawing.Size(100, 24);
             this.lblResult.TabIndex = 3;
+            this.lblResult.Text = "励志名言：";
             // 
             // tagsBindingSource
             // 
@@ -103,7 +105,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(120, 101);
+            this.label3.Location = new System.Drawing.Point(66, 264);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 18);
             this.label3.TabIndex = 6;
@@ -117,20 +119,33 @@
             // cbTags
             // 
             this.cbTags.FormattingEnabled = true;
-            this.cbTags.Location = new System.Drawing.Point(189, 92);
+            this.cbTags.Location = new System.Drawing.Point(155, 261);
             this.cbTags.Name = "cbTags";
-            this.cbTags.Size = new System.Drawing.Size(198, 26);
+            this.cbTags.Size = new System.Drawing.Size(368, 26);
             this.cbTags.TabIndex = 7;
             // 
             // tagsTableAdapter
             // 
             this.tagsTableAdapter.ClearBeforeFill = true;
             // 
+            // txtResult
+            // 
+            this.txtResult.BackColor = System.Drawing.SystemColors.Window;
+            this.txtResult.Enabled = false;
+            this.txtResult.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtResult.ForeColor = System.Drawing.Color.Red;
+            this.txtResult.Location = new System.Drawing.Point(155, 68);
+            this.txtResult.Multiline = true;
+            this.txtResult.Name = "txtResult";
+            this.txtResult.Size = new System.Drawing.Size(368, 161);
+            this.txtResult.TabIndex = 8;
+            // 
             // Notice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 442);
+            this.ClientSize = new System.Drawing.Size(564, 651);
+            this.Controls.Add(this.txtResult);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.cbTags);
             this.Controls.Add(this.label3);
@@ -164,5 +179,6 @@
         private NeoNoticeWorkDataSetTableAdapters.TagsTableAdapter tagsTableAdapter;
         private System.Windows.Forms.BindingSource tagsBindingSource1;
         private System.Windows.Forms.ComboBox cbTags;
+        private System.Windows.Forms.TextBox txtResult;
     }
 }

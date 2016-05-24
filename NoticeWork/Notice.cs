@@ -62,7 +62,7 @@ namespace NoticeWork
                 var togice = from a in db.InspirationalQuotes
                              where a.ID==randomRowNumber
                              select a;
-                lblResult.Text = togice.First().Name;
+                txtResult.Text = togice.First().Name;
             }
         }
         
