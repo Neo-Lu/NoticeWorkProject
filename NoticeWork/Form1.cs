@@ -47,6 +47,10 @@ namespace NoticeWork
             int minute = int.Parse(txtNoticeTime.Text.Trim());
             Notice tag = new Notice(DateTime.Now.AddMinutes(-minute), DateTime.Now);
             tag.Show();
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+            player.SoundLocation = Application.StartupPath + "//sound.wav";
+            player.Load();
+            player.PlayLooping();
         }
         
     }

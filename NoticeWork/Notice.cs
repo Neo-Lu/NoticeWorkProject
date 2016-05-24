@@ -42,6 +42,10 @@ namespace NoticeWork
                 entity.NoticeLog.Add(model);
                 entity.SaveChanges();
                 this.Close();
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+                player.SoundLocation = Application.StartupPath + "//sound.wav";
+                player.Load();
+                player.Stop();
             }
         }
 
@@ -62,7 +66,7 @@ namespace NoticeWork
                 var togice = from a in db.InspirationalQuotes
                              where a.ID==randomRowNumber
                              select a;
-                txtResult.Text = togice.First().Name;
+                txtResult.Text = togice.First().Name.Trim();
             }
         }
         

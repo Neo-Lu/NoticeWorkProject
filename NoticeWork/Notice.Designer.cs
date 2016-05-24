@@ -131,7 +131,6 @@
             // txtResult
             // 
             this.txtResult.BackColor = System.Drawing.SystemColors.Window;
-            this.txtResult.Enabled = false;
             this.txtResult.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtResult.ForeColor = System.Drawing.Color.Red;
             this.txtResult.Location = new System.Drawing.Point(155, 68);
